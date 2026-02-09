@@ -8,7 +8,7 @@ import CallToAction from './components/CallToAction'
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#101010]">
+    <div className="min-h-screen bg-black">
       <Header />
       <NavBarHover />
       <div className='relative z-20'><HeroSection /></div>

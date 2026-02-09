@@ -21,12 +21,14 @@ const CardTemplate = ({
 
   const yParallax = useTransform(scrollProgress, [0, 1], ["0%", "-15%"]);
   const imgYParallax = useTransform(scrollProgress, [0, 1], ["5%", "-5%"]);
-  const opacityProgress = useTransform(localScroll, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
 
   return (
     <motion.div 
       ref={ref}
-      style={{ opacity: opacityProgress }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-50px" }}
       className={`
       w-full max-w-304 
       bg-neutral-950 rounded-4xl outline-[6px] outline-offset-[-6px] outline-white/20

@@ -33,7 +33,13 @@ const CallToAction = () => {
       {/* Color overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 px-4">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="relative z-10 flex flex-col md:flex-row items-center gap-8 px-4"
+      >
         <h2 className="text-white text-4xl md:text-5xl font-bold text-center md:text-left">
           Join us on a journey to excellence.
         </h2>
@@ -41,7 +47,7 @@ const CallToAction = () => {
           Get Started 
           <span className="text-xl">→</span>
         </button>
-      </div>
+      </motion.div>
     </section>
   );
 };

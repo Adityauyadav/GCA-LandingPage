@@ -27,9 +27,15 @@ const MissionStatement = () => {
 
       <div className="absolute inset-0 bg-black/60" />
 
-      <h2 className="relative z-10 text-white text-4xl md:text-5xl font-bold text-center px-4">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative z-10 text-white text-4xl md:text-5xl font-bold text-center px-4"
+      >
         Three steps. A million possibilities.
-      </h2>
+      </motion.h2>
     </section>
   );
 };

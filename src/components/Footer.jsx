@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,7 +14,13 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-16 px-8 font-sans">
-      <div className="max-w-7xl mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-7xl mx-auto"
+      >
         {/* Header Text */}
         <div className="text-center mb-16">
           <p className="text-2xl font-light">
@@ -97,7 +104,7 @@ const Footer = () => {
         <div className="border-t border-zinc-900 pt-8 text-center text-xs text-zinc-500 uppercase tracking-widest">
           © 2025 Global Cybersecurity Association. All Rights Reserved.
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };

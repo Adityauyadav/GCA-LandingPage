@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const NavItem = ({ name, hasDropdown, isMobile }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +76,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-[#000000] border-b border-[#262626] px-4 md:px-28 py-5 font-sans font-regular relative">
+    <motion.nav 
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="w-full bg-[#000000] border-b border-[#262626] px-4 md:px-28 py-5 font-sans font-regular relative"
+    >
       <div className="max-w-304 mx-auto flex justify-between md:justify-center items-center gap-8">
         
         {/* Mobile Logo/Placeholder */}
@@ -109,7 +115,7 @@ const Navbar = () => {
           ))}
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 

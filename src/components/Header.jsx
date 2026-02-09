@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
 import { User, ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-4 md:px-6 py-2 bg-black border-b border-white/10">
+    <motion.header 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="flex items-center justify-between px-4 md:px-6 py-2 bg-black border-b border-white/10"
+    >
       {/* Left side spacer to balance the layout for center logo */}
       <div className="flex-1 hidden md:block"></div>
 
@@ -44,7 +50,7 @@ const Header = () => {
              </a>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

@@ -5,6 +5,11 @@
   --font-sans: "Inter", sans-serif;
 }
 
+body {
+  background-color: black;
+  margin: 0;
+}
+
 /* Custom Animations */
 @keyframes fadeInUp {
   from {

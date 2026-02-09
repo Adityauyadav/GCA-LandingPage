@@ -1,16 +1,59 @@
-# React + Vite
+# IdeaTribe Frontend Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains my implementation of the IdeaTribe landing page based on the provided Figma design. It is built as a responsive Single Page Application (SPA).
 
-Currently, two official plugins are available:
+## 🚀 Key Features
+- **Pixel-perfect implementation** of the Figma design.
+- **Responsive Layout** adapting mobile, tablet, and desktop views.
+- **Animations** using Framer Motion for smooth component entry and interactions.
+- **Modern Styling** with Tailwind CSS v4.
+- **Icons** provided by Lucide React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS (v4)
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Linting:** ESLint
 
-## React Compiler
+## 💻 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
+Ensure you have Node.js installed on your machine.
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd IdeaTribeTest
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173`.
+
+## 🏗 Build for Production
+
+To create a production-ready build:
+```bash
+npm run build
+```
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+## 📝 Design Decisions & Notes
+
+- **Tailwind CSS:** Chosen for utility-first styling to maintain consistency with the specific spacing and typography in the Figma file.
+- **Component Structure:** The UI is broken down into small, reusable components (Hero, Features, Footer) to maintain clean code separation.
+- **Framer Motion:** Used to add subtle entrance animations that enhance user experience without compromising performance.

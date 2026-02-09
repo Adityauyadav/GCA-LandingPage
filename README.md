@@ -1,6 +1,4 @@
-# IdeaTribe Frontend Assignment
-
-This repository contains my implementation of the IdeaTribe landing page based on the provided Figma design. It is built as a responsive Single Page Application (SPA).
+This repository contains my implementation of the GCA landing page based on the provided Figma design. It is built as a responsive Single Page Application (SPA).
 
 ## 🚀 Key Features
 - **Pixel-perfect implementation** of the Figma design.
